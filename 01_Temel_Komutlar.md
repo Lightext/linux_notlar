@@ -62,3 +62,7 @@ Varsayılan olarak alfabetik sıralar.
 Tersten sıralar.
 ### -n
 Sayısal sıralama yapar.
+
+## tr
+*translate*
+

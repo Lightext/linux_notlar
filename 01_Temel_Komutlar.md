@@ -44,11 +44,11 @@ Birden çok delimiter kullanımı ile girilen dosyalar arası sırasıyla belirl
 ### -s
 Tek bir dosyada satırları yan yana birleştirmek için kullanılır.
 Örneğin *renkler.txt* adlı bir dosyada alt alta:
-	```
-	kırmızı
-	mavi
-	yeşil
-	```
+```
+kırmızı
+mavi
+yeşil
+```
 yazıyor. **"paste -s renkler.txt"** komutunu girdiğimizde *"kırmızı	yeşil	mavi"* çıktısını alırız.
 
 ## sort

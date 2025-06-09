@@ -60,3 +60,5 @@ Varsayılan olarak alfabetik sıralar.
 
 ### -r
 Tersten sıralar.
+### -n
+Sayısal sıralama yapar.

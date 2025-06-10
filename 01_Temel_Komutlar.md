@@ -194,3 +194,15 @@ Son ekler sayısal bir şekilde adlandırılır. 00, 01, 02...
 
 ### -a
 Son ekin kaç haneli olacağını belirler. Varsayılan olarak 2 dir.
+
+## tee
+Girilen veriyi alır hem ekrana bastırır hem de belirtilen dosyaya yazar.
+Genellikle pipe ile kullanılır.
+```
+{çıktı} | tee [dosya] ...
+```
+Birden çok dosyaya tek komutla aynı işlem yapılabilir.
+
+### -a --append
+*>>* gibi input u dosyanın sonuna ekler.
+

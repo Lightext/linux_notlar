@@ -204,5 +204,5 @@ Genellikle pipe ile kullanılır.
 Birden çok dosyaya tek komutla aynı işlem yapılabilir.
 
 ### -a --append
-*>>* gibi input u dosyanın sonuna ekler.
+**>>** gibi input u dosyanın sonuna ekler.
 

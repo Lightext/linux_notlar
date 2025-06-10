@@ -22,7 +22,7 @@ echo "root:x:0:0:root:/root:/bin/bash" | cut -d ":" -f 1
 ```
 Çıktı : **root**
 
-Burada **-d** seçeneği "delimiter" belirlemek için kullanılır. **-f** ise 1. alanı seçmek için kullanılır.
+Burada **-d** seçeneği "delimiter" belirlemek için kullanıldı. **-f** ise 1. alanı seçmek için kullanıldı.
 
 Birden fazla alan seçmek için "-f 1,7" kullanılır ve 1. ile 7. alan seçilir.
 
@@ -60,10 +60,8 @@ sort [seçenekler] [dosya]
 ```
 Varsayılan olarak alfabetik sıralar.
 
-### -r
-Tersten sıralar.
-### -n
-Sayısal sıralama yapar.
+-r : Tersten sıralama yapar.
+-n : Sayısal sıralama yapar. (küçükten büyüğe)
 
 ## tr
 *translate*

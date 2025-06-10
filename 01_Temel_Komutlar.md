@@ -206,3 +206,12 @@ Birden çok dosyaya tek komutla aynı işlem yapılabilir.
 ### -a --append
 **>>** gibi input u dosyanın sonuna ekler.
 
+## nl
+Metin dosyalarının satırlarını numaralandırmak için kullanılır.
+Boş satırları atlar, numaralandırma şekli değiştirilebilir.
+
+* -b : Neyin numaralandırılacağını belirler.
+	* a : Tüm satırları numaralandırır.
+	* t : Sadece boş olmayan metin satırlarını numaralandırır. (Varsayılan)
+	* n : Hiçbir satırı numaralandırmaz.
+

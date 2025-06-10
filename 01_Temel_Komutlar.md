@@ -21,7 +21,9 @@ Sütunlardan belirtileni seçer.
 echo "root:x:0:0:root:/root:/bin/bash" | cut -d ":" -f 1
 ```
 Çıktı : **root**
+
 Burada **-d** seçeneği "delimiter" belirlemek için kullanılır. **-f** ise 1. alanı seçmek için kullanılır.
+
 Birden fazla alan seçmek için "-f 1,7" kullanılır ve 1. ile 7. alan seçilir.
 
 Aynı şekilde dosyadan sütun çekmek için ise

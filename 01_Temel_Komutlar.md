@@ -66,3 +66,74 @@ Varsayılan olarak alfabetik sıralar.
 ## tr
 *translate*
 
+Bir karakter kümesini başka bir karakter kümesine çevirir, silebilir veya tekrar eden karakterleri sıkıştırabilir.
+
+Satır değil, karakter odaklı çalışır.
+
+```
+tr [seçenekler] [kaynak_karakterler] [hedef_karakterler]
+```
+**tr** doğrudan dosya işlemez; **stdin** ile çalışır.
+
+### 'a-z' 'A-Z'
+Küçük harfleri büyük harfe çevirmek için kullanılır. Tersi için de aynısı geçerlidir.
+
+### -d
+Belirli karakterleri silmek için kullanılır. Sayısal aralık (1-9) belirtilebilir ve bu aralıktaki tüm değerler silinir. Veya tırnak içerisine silinmesi istenen karakterler yazılarak o karakterler silinir.
+```
+echo "abc123def456" | tr -d '0-9'
+```
+Çıktı: *abcdef*
+
+```
+echo "a-b+c=d" | tr -d '-+='
+```
+Çıktı: *abcd*
+
+### -s
+Tekrar eden karakterleri sıkıştırmak için kullanılır.
+```
+echo "aaabbbbcccdd" | tr -s 'abc'
+```
+Çıktı: *abcdd*
+
+## head
+Herhangi bir dosyanın içeriğini kısaca görmek için kullanılır.
+
+Varsayılan olarak ilk 10 satırı gösterir.
+```
+head [dosya_adı]
+```
+
+Birden fazla dosya ile kullanıldığında iste aynı şekilde bir dosya için yapacağı şeyi birden fazla dosya için de uygular ve hangi çıktının hangi dosyaya ait olduğunu da başlıklarla belirtir.
+
+**-q** (quiet) parametresi kullanıldığında birden çok dosyanın çıktısındaki başlıkları yok sayar ve arada boş satır bırakmaz.
+
+**-v** parametresi ile de tek dosyada bile bu başlığı oluşturur.
+
+### -n
+Varsayılan 10 satır yerine satır sayısı belirlemek için kullanılır.
+```
+head -n [sayı] [dosya_adı]
+veya
+head -[sayı] [dosya_adı]
+```
+
+### -c
+Satır yerine byte sayısına göre çıktı verilmesini sağlar.
+```
+head -c 100 ayarlar.conf
+```
+Bu komutu girdikten sonra 100 byte (~100 karakter) lık veri ekrana bastırılır.
+
+## tail
+Bir veya daha fazla dosyanın sonunu (varsayılan olarak 10 satırını) gösterir.
+
+*head* komutu ile büyük ölçüde benzerdir. head başlığı altındaki parametrelere ek olarak tail da bazı ek parametreler vardır.
+
+### -f
+*--follow*
+
+Bir dosyayı takip etmenizi sağlar. Yani bir dosyaya yeni satırlar eklendikçe ekrana basılır.
+
+Genellikle log takibi için kullanılır.

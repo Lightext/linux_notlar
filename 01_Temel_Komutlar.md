@@ -57,7 +57,7 @@ Varsayılan olarak alfabetik sıralar.
 
 -r : Tersten sıralama yapar.
 -n : Sayısal sıralama yapar. (küçükten büyüğe)
-
+-f : Büyük/küçük harf duyarlılığını yok sayar.
 ## tr
 *translate*
 
@@ -132,3 +132,65 @@ Bir veya daha fazla dosyanın sonunu (varsayılan olarak 10 satırını) göster
 Bir dosyayı takip etmenizi sağlar. Yani bir dosyaya yeni satırlar eklendikçe ekrana basılır.
 
 Genellikle log takibi için kullanılır.
+
+## join
+İki metin dosyasını ortak bir alana göre birleştirerek tek çıktı oluşturmayı sağlar.
+
+Verilerin iki metin dosyasındaki ortak alan aynı şekilde sıralanmış olmalıdır.
+
+Eğer iki tarafta ortak olmayan veriler varsa o satırlar çıktıya dahil edilmez.
+
+Varsayılan olarak her iki dosyadaki ilk sütun ortak alan kabul edilir.
+
+### -j
+İki dosyadaki ortak alan aynı sütun numarasındaysa kullanılır ve veriler o sütuna göre birleştirilir.
+
+### -1 ve -2
+```
+-1 [alan_numarası]
+-2 [alan_numarası]
+```
+```
+join -1 1 -2 2 a.txt b.txt
+```
+Bu şekilde 1. dosyanın 1. sütunu ile 2. dosyanın 2. sütununun ortak alan olduğu belirlenir ve buna göre veriler birleştirilir.
+
+### -t
+Alan ayıracını belirtmek için kullanılır. Varsayılan olarak boşluk ile ayrıldığı için farklı bir delimiter varsa bu seçenek kullanılır. 
+
+### -a
+```
+join -a [dosya_numarası] [dosya1] [dosya2]
+```
+Eşleşmeyen satırları da çıktıya dahil eder. Dosya numarası ile hangi dosyadan gelen eşleşmemiş veri seçilir.
+
+### -o
+```
+join -o 1.2 1.3 2.2 a.txt b.txt
+```
+Burada 1.dosyadan 2. sütun, 1. dosyadan 3. sütun ve 2. dosyadan 2. sütun birleştirilir.
+Bu parametre sadece istenen değerleri istenilen sırayla birleştirebilmeyi sağlar.
+
+## split
+Tek bir dosyayı belirlenen kurallara göre daha küçük yönetilebilir parçalara ayırmak için kullanılır.
+Bölünen parçalar "xaa, xab, xac..." şeklinde ayrılır.
+Varsayılan olarak 1000 satıra ayrılır.
+```
+split [seçenekler] [dosya] [önek]
+```
+En sona girilen önek dosya isimlerini belirlemekte kullanılır. Kullanılmazsa varsayılan adlandırma ile adlandırılır. Kullanıldığında girilen önekin sonuna "aa, ab, ac..." şeklinde adlandırılır.
+### -l
+Belirlenen satır sayısı kadar parçalara ayrılır.
+```
+-l [satır_sayısı]
+```
+
+### -b
+Dosyaları boyutuna göre parçalara ayırmak için boyut belirler.
+(..-b 100K, 500M, 10G...)
+
+### -d
+Son ekler sayısal bir şekilde adlandırılır. 00, 01, 02...
+
+### -a
+Son ekin kaç haneli olacağını belirler. Varsayılan olarak 2 dir.

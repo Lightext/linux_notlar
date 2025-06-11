@@ -55,9 +55,12 @@ sort [seçenekler] [dosya]
 ```
 Varsayılan olarak alfabetik sıralar.
 
--r : Tersten sıralama yapar.
--n : Sayısal sıralama yapar. (küçükten büyüğe)
--f : Büyük/küçük harf duyarlılığını yok sayar.
+* -r : Tersten sıralama yapar.
+* -n : Sayısal sıralama yapar. (küçükten büyüğe)
+* -f : Büyük/küçük harf duyarlılığını yok sayar.
+* -k : Belirli bir sütuna göre sıralama yapar.
+* -u : Tekrarlanan satırları siler.
+
 ## tr
 *translate*
 

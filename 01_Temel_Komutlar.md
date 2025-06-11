@@ -214,6 +214,7 @@ Boş satırları atlar, numaralandırma şekli değiştirilebilir.
 	* a : Tüm satırları numaralandırır.
 	* t : Sadece boş olmayan metin satırlarını numaralandırır. (Varsayılan)
 	* n : Hiçbir satırı numaralandırmaz.
+	* p[desen] : Sadece içinde belirtilen desen olan satırları numaralandırır.
 
 * -w : Satır başından itibaren numaralara kadar olan boşluğu belirler. (width)
 * -s : Numara ile metin arasındaki ayırıcı karakteri belirler. (separator)
@@ -221,3 +222,22 @@ Boş satırları atlar, numaralandırma şekli değiştirilebilir.
 	* ln : Sola yaslı
 	* rn : Sağa yaslı, başına sıfır koymadan.
 	* rz : Sağa yaslı, başına sıfır koyarak. (Varsayılan)
+
+## wc
+*word count*
+Bir dosya veya komut çıktısının içindeki satır, kelime ve bayt/karakter sayısını hesaplayan bir araçtır.
+
+```
+wc siir.txt
+```
+Çıktı: 3  6 53 siir.txt 
+
+Bu çıktının anlamı:
+	* 3 : Dosyada 3 satır var.
+	* 6 : Dosyada 6 kelime var.
+	* 53 : Dosya 53 byte boyutunda.
+
+* -l : Sadece satır sayısını gösterir. (lines)
+* -w : Sadece kelime sayısını gösterir. (words)
+* -c : Sadece byte sayısını gösterir. (bytes)
+* -m : Sadece karakter sayısını gösterir. (characters)

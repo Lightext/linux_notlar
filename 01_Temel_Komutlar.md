@@ -210,8 +210,14 @@ Birden çok dosyaya tek komutla aynı işlem yapılabilir.
 Metin dosyalarının satırlarını numaralandırmak için kullanılır.
 Boş satırları atlar, numaralandırma şekli değiştirilebilir.
 
-* -b : Neyin numaralandırılacağını belirler.
+* -b : Neyin numaralandırılacağını belirler. (body numbering)
 	* a : Tüm satırları numaralandırır.
 	* t : Sadece boş olmayan metin satırlarını numaralandırır. (Varsayılan)
 	* n : Hiçbir satırı numaralandırmaz.
 
+* -w : Satır başından itibaren numaralara kadar olan boşluğu belirler. (width)
+* -s : Numara ile metin arasındaki ayırıcı karakteri belirler. (separator)
+* -n : Numaraların formatını belirler.
+	* ln : Sola yaslı
+	* rn : Sağa yaslı, başına sıfır koymadan.
+	* rz : Sağa yaslı, başına sıfır koyarak. (Varsayılan)

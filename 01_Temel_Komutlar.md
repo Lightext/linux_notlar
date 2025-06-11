@@ -241,3 +241,13 @@ Bu çıktının anlamı:
 * -w : Sadece kelime sayısını gösterir. (words)
 * -c : Sadece byte sayısını gösterir. (bytes)
 * -m : Sadece karakter sayısını gösterir. (characters)
+
+## expand
+Metin dosyalarındaki veya komut çıktılarındaki TAB karakterlerini, belirlenen sayıda boşuk karakteriyle değiştirmeye yarar.
+TAB = 8 boşluk
+
+* -t : Her bir TAB'ın kaç boşluğa dönüşeceğini belirler.
+* -i : Sadece satır başlarındaki TAB'ları boşluklara çevirir.
+
+
+

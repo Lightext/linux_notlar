@@ -207,7 +207,7 @@ Genellikle pipe ile kullanılır.
 Birden çok dosyaya tek komutla aynı işlem yapılabilir.
 
 ### -a --append
-**>>** gibi input u dosyanın sonuna ekler.
+">>" operatörü gibi input u dosyanın sonuna ekler.
 
 ## nl
 Metin dosyalarının satırlarını numaralandırmak için kullanılır.
@@ -235,7 +235,8 @@ wc siir.txt
 ```
 Çıktı: 3  6 53 siir.txt 
 
-Bu çıktının anlamı:
+* Bu çıktının anlamı:
+
 	* 3 : Dosyada 3 satır var.
 	* 6 : Dosyada 6 kelime var.
 	* 53 : Dosya 53 byte boyutunda.
@@ -251,4 +252,11 @@ TAB = 8 boşluk
 
 * -t : Her bir TAB'ın kaç boşluğa dönüşeceğini belirler.
 * -i : Sadece satır başlarındaki TAB'ları boşluklara çevirir.
-ds
+
+## unexpand
+"expand" komutunun zıttıdır. Metin dosyalarındaki veya komut çıktılarındaki sadece satır başındaki boşluk dizilerini mümkün olan yerlerde TAB'a dönüştürür.
+
+Varsayılan olarak 8 boşluk dönüştürür.
+
+* -t : Bir TAB'ın kaç boşluğa denk geleceğini belirler.
+* -a : Sadece satır başlarındaki değil mümkün olan her yerdeki boşlukları TAB'a dönüştürür.

@@ -251,3 +251,4 @@ TAB = 8 boşluk
 
 * -t : Her bir TAB'ın kaç boşluğa dönüşeceğini belirler.
 * -i : Sadece satır başlarındaki TAB'ları boşluklara çevirir.
+ds

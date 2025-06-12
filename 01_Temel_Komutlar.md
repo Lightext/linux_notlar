@@ -260,3 +260,14 @@ Varsayılan olarak 8 boşluk dönüştürür.
 
 * -t : Bir TAB'ın kaç boşluğa denk geleceğini belirler.
 * -a : Sadece satır başlarındaki değil mümkün olan her yerdeki boşlukları TAB'a dönüştürür.
+
+## uniq
+Sıralı bir dosya veya metin çıktısında ardışık olarak tekrar eden satırları filtrelemek veya saymak için kullanılır.
+
+*Sadece sıralanmış verilerde kullanılabilir.*
+
+* -c (count): Her satırın kaç kez tekrarlandığını sayar ve satırın başına bu sayıyı ekler.
+* -d (duplicated): Sadece tekrar eden satırları gösterir.
+* -u (unique): Sadece hiç tekrar etmeyen satırları gösterir.
+* -i (ignore-case): Büyük/küçük harf duyarlılığını ortadan kaldırır. "Elma" ve "elma" aynı kabul edilir.
+

@@ -271,3 +271,13 @@ Sıralı bir dosya veya metin çıktısında ardışık olarak tekrar eden satı
 * -u (unique): Sadece hiç tekrar etmeyen satırları gösterir.
 * -i (ignore-case): Büyük/küçük harf duyarlılığını ortadan kaldırır. "Elma" ve "elma" aynı kabul edilir.
 
+## grep
+Bir metin akışı içindeki belirli bir **deseni** arayan ve eşleşen satırları bir filtre gibi süzerek gösteren bir komuttur.
+
+* -i (ignore-case): Büyük/küçük harf ayrmı X
+* -v (invert-match): Belirttiğiniz deseni içermeyen tüm satırları gösterir.
+* -r (recursive): Bütün bir klasörü ve alt klasörlerini tarar.
+* -n (line-number): Eşleşen satırın dosyadaki numarasını gösterir.
+* -w (word-regexp): Sadece tam olarak eşleşen kelimeleri bulur. `grep -w "sunucu"` komutu "sunucum" kelimesini dahil etmez.
+* -C <sayı> (Context): Eşleşen satırla birlikte öncesindeki ve sonrasındaki satır veya satırları da gösterir. Girilen sayı değeri ise önceki veya sonraki satır sayısını belirler.
+
